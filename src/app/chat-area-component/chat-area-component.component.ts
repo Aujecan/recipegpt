@@ -25,7 +25,7 @@ export class ChatAreaComponentComponent implements OnInit {
   }
 
   generateCompletion(ingredients: string): void {
-    const apiKey = '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'; // Replace with your OpenAI API key
+    const apiKey = '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'; // Replace with your OpenAI API key
     const endpoint = 'https://api.openai.com/v1/chat/completions';
     const maxTokens = 4000;
     const temperature = 0;
@@ -36,7 +36,7 @@ export class ChatAreaComponentComponent implements OnInit {
 
     const requestBody = {
       model: 'gpt-3.5-turbo',
-      messages: [{ 'role': 'system', 'content': 'Act as a Chef AI whose only task is to find a recipe using only the food items in the input' }, 
+      messages: [{ 'role': 'system', 'content': 'Act as a Chef AI' }, 
                  { 'role': 'user', 'content': prompt }],
       max_tokens: maxTokens,
       temperature: temperature
