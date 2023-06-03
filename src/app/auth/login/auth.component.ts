@@ -39,6 +39,7 @@ export class AuthComponent implements OnInit {
     }
 
     this.auth.login(this.loginform.value.email, this.loginform.value.password);
+    this.router.navigate(['/findRecipe']);
     this.email='';
     this.password='';
 
