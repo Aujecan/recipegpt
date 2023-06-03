@@ -25,7 +25,7 @@ export class ChatAreaComponentComponent implements OnInit {
   }
 
   generateCompletion(ingredients: string): void {
-    const apiKey = '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'; // Replace with your OpenAI API key
+    const apiKey = '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'; // Replace with your OpenAI API key
     const endpoint = 'https://api.openai.com/v1/chat/completions';
     const maxTokens = 4000;
     const temperature = 0;
