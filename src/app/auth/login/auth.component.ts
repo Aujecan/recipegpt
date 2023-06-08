@@ -27,34 +27,16 @@ export class AuthComponent implements OnInit {
   }
 
   loginClick() {
-
-    if(this.loginform.value.email==''){
-      alert('Please enter email id');
-      return;
-    }
-
-    if(this.loginform.value.password==''){
-      alert('Please enter password');
-      return;
-    }
-
-    this.auth.login(this.loginform.value.email, this.loginform.value.password);
-    this.router.navigate(['/findRecipe']);
-    this.email='';
-    this.password='';
-
-    let formData = {
-      username: this.loginform.value.email,
-      password: this.loginform.value.password,
-    };
-
-    console.log(formData);
-
-    // if (formData.username === "admin" && formData.password === "YWRtaW4=")
-    // {
-
-    // this.router.navigate(['/findRecipe']);
-
-    // }
+    this.auth.login(this.loginform.value.email, this.loginform.value.password).subscribe(
+      (response) => {
+        // Login successful, handle the response as needed
+        console.log(response);
+        this.router.navigate(['/findRecipe'])
+      },
+      (error) => {
+        // Login failed, handle the error
+        console.error(error);
+      }
+    );
   }
 }
