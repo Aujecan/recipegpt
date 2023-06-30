@@ -1,12 +1,5 @@
 <div class="showcase">
   <div class="video-container">
-    <video
-      src="../../assets/myvideo.mp4"
-      autoplay
-      muted
-      loop
-      id="myvideo"
-    ></video>
     <div class="login-box">
         <h2>Register</h2>
       <form [formGroup]="registerform" (ngSubmit)="register()">
@@ -23,7 +16,7 @@
 
         <div class="user-box">
           <input
-            type="passworda"
+            type="password"
             id="passworda"
             name="passworda"
             formControlName="passworda"
@@ -44,7 +37,7 @@
         </div>
 
           <button class="submit-btn" type="submit">Register</button>
-          <p>Already have an account? <a routerLink="">Login</a></p>
+          <p>Already have an account? <a routerLink="/login">Login</a></p>
       </form>
     </div>
   </div>

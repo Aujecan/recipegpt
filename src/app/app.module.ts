@@ -4,7 +4,6 @@ import { ReactiveFormsModule} from '@angular/forms'
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatAreaComponentComponent } from './chat-area-component/chat-area-component.component';
@@ -12,6 +11,7 @@ import { AuthComponent } from './auth/login/auth.component';
 import { environment } from 'src/environments/environment';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
+import { LandingPageComponent } from './auth/landing_page/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.co
     ChatAreaComponentComponent,
     AuthComponent,
     SignupComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

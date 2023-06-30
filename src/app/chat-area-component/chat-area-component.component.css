@@ -1,9 +1,31 @@
+.hdr-div {
+  display: flex;
+  align-items: center;
+  background-color: #d5deaa ;
+  color: rgb(59, 59, 59);
+  height: 10vh;
+  font-size: xx-large;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+  .hdr-div {
+    flex-direction: column;
+    height: auto;
+  }
+  
+}
+
 .container {
-    max-width: 600px;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #dcedc8
   }
   
   .chat-container {
@@ -28,7 +50,7 @@
   }
   
   .question-section {
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .question-section input[type="text"] {
@@ -40,20 +62,16 @@
   
   .question-section button {
     padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
+    background-color: #dcedc8;
+    color:  #333333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .question-section button:hover {
-    background-color:  #4caf50;
-    color:#fff;
+    background-color:  #d5deaa;
+    color: rgb(59, 59, 59);
     border-radius: 5px;
-    box-shadow: 0 0 5px#4caf50,
-                0 0 5px #4caf50,
-                0 0 5px #4caf50,
-                0 0 5px #4caf50;
   }
   

@@ -42,10 +42,18 @@ export class SignupComponent implements OnInit {
     }
 
     if(this.registerform.value.passworda === this.registerform.value.password) {
+      this.auth.register(this.registerform.value.email, this.registerform.value.password).subscribe(
+        (response: any) => {
+          // Login successful, handle the response as needed
+          console.log(response);
+          this.router.navigate(['/login'])
+        },
+        (error: any) => {
+          // Login failed, handle the error
+          console.error(error);
+        }
+      );
 
-      this.auth.register(this.registerform.value.email, this.registerform.value.password);
-      this.email='';
-      this.password='';
     }
 
     else{

@@ -1,11 +1,16 @@
-<h1>Let Him Cook</h1>
-  <p>AI powered</p>
-  <div class="container">
-    <div id="chat" class="chat-container"></div>
-    <div id="recipe"></div>
-    <div class="question-section">
-        <label for="ingredients">Enter the available ingredients:</label>
-        <input type="text" [(ngModel)]="ingredients" id="ingredients" placeholder="Enter ingredients">
-        <button (click)="findRecipe()">Find Recipe</button>
-    </div>      
+<div>
+  <div class="hdr-div">
+    <p style="margin-left: 10px;">Let him Cook</p>
   </div>
+
+  <div class="container">
+      <div id="chat" class="chat-container"></div>
+      <div id="recipe"></div>
+      <div class="question-section">
+          <label for="ingredients">Enter the available ingredients:</label>
+          <input type="text" [(ngModel)]="ingredients" id="ingredients" placeholder="Enter ingredients">
+          <button (click)="findRecipe()">Find Recipe</button>
+      </div>      
+  </div>
+  
+</div>

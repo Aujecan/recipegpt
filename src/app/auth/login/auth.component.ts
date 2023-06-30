@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-auth',
@@ -26,17 +27,15 @@ export class AuthComponent implements OnInit {
     });
   }
 
-  loginClick() {
-    this.auth.login(this.loginform.value.email, this.loginform.value.password).subscribe(
-      (response) => {
-        // Login successful, handle the response as needed
-        console.log(response);
-        this.router.navigate(['/findRecipe'])
-      },
-      (error) => {
-        // Login failed, handle the error
-        console.error(error);
-      }
-    );
+  async loginClick() {
+    try {
+      const response = await firstValueFrom(this.auth.login(this.loginform.value.email, this.loginform.value.password));
+      // Login successful, handle the response as needed
+      console.log(response);
+      this.router.navigate(['/findRecipe']);
+    } catch (error) {
+      // Login failed, handle the error
+      console.error(error);
+    }
   }
 }

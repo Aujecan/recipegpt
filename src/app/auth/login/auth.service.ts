@@ -19,6 +19,9 @@ export class AuthService {
   }
 
   register(email:string, password:string){
+    const url = 'http://localhost:3000/signup';
+    const body = { "email" : email, "password" : password };
+    return this.http.post(url, body);
   }
 
   logout(){
