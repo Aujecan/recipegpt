@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
 import { LandingPageComponent } from './auth/landing_page/landing-page/landing-page.component';
+import { NaviBarComponent } from './navi-bar/navi-bar.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LandingPageComponent } from './auth/landing_page/landing-page/landing-p
     AuthComponent,
     SignupComponent,
     ForgotpasswordComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NaviBarComponent
   ],
   imports: [
     BrowserModule,
