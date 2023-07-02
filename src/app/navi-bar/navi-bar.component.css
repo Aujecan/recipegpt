@@ -40,6 +40,33 @@
     color: rgb(59, 59, 59);
   }
   
+  button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    color: #333333;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    background-color: #dcedc8;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  button a {
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+  }
+  
+  button:hover {
+    background-color: #d5deaa;
+    color: rgb(59, 59, 59);
+    border-radius: 5px;
+  }
+  
   /* Media queries for responsive layout */
   @media (max-width: 768px) {
     .hdr-div {
@@ -50,31 +77,13 @@
     .logo {
       margin-bottom: 10px;
     }
+  
+    nav {
+      justify-content: space-between;
+    }
+  
+    button {
+      margin-top: 10px;
+    }
   }
   
-button {
-    position: relative;
-    display: inline-block;
-    padding: 10px 10px;
-    color:  #333333;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    letter-spacing: 1px;
-    background-color: #dcedc8;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-button a {
-    text-decoration: none;
-    color: rgb(59, 59, 59);
-}
-
-button:hover{
-    background-color:  #d5deaa;
-    color: rgb(59, 59, 59);
-    border-radius: 5px;
-}
